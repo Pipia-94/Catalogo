@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SHEIN PEDIDOS</title>
+
+  <!-- Hace que la página se vea bien en móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fuente bonita -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Box-sizing universal */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff5f8;
+      color: #444;
+      margin: 0;
+      padding: 15px;
+      text-align: center; 
+      overflow-x: hidden; /* Evita scroll horizontal */
+    }
+
+    h2 {
+      color: #c15387;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    h3 {
+      color: #a23b6c;
+      margin-top: 20px;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .politicas {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(193, 83, 135, 0.2);
+      padding: 20px;
+      margin-bottom: 25px;
+      text-align: left;
+      width: 100%;
+      max-width: 480px; /* Ajuste máximo */
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .politicas ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .contenedor {
+      background: #fff;
+      display: block;
+      padding: 25px 15px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(193, 83, 135, 0.2);
+      width: 100%;
+      max-width: 480px; /* Ajuste máximo */
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .contenedor h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    input {
+      padding: 14px;
+      margin: 10px 0;
+      width: 90%; /* Ocupa 90% del contenedor */
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #c15387;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #a23b6c;
+      box-shadow: 0 0 8px rgba(194, 83, 135, 0.3);
+    }
+
+    button {
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      background-color: #c15387;
+      color: white;
+      cursor: pointer;
+      font-weight: 500;
+      width: 90%; /* Ajuste ancho del botón */
+      max-width: 250px;
+      margin-bottom: 10px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #a23b6c;
+      transform: scale(1.03);
+    }
+
+    #texto-resultado {
+      margin-top: 20px;
+      font-size: 24px; /* Un poco más grande */
+      font-weight: 600;
+      color: #a64b79;
+    }
+
+    #resultado {
+      margin-top: 8px;
+      font-size: 32px;
+      font-weight: 600;
+      color: #8f2e5b;
+    }
+
+    .contacto {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(193, 83, 135, 0.2);
+      padding: 20px;
+      width: 100%;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 480px) {
+      h2 { font-size: 24px; }
+      h3 { font-size: 18px; }
+      .politicas, .contenedor, .contacto { font-size: 16px; padding: 15px; }
+      input { font-size: 15px; padding: 12px; }
+      button { font-size: 15px; padding: 12px; }
+      #resultado { font-size: 28px; }
+      #texto-resultado { font-size: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <h2>SHEIN PEDIDOS</h2>
+
+  <div class="politicas">
+    <h3>🛍️ Compra:</h3>
+    <ul>
+      <li>Descarga la app de Shein y selecciona <strong>región de México</strong>.</li>
+      <li>Selecciona los productos que desees y añádelos a tu carrito.</li>
+      <li><strong>UTILIZA LA CALCULADORA QUE TIENES AQUÍ ABAJO PARA SABER EL PRECIO DE TU PRODUCTO.</strong></li>
+      <li>Comparte tu carrito a nuestro <strong>WhatsApp 56320811</strong>.</li>
+      <li>Te confirmamos el monto total.</li>
+      <li>Se deberá cancelar el <strong>50% del valor total</strong> al momento de confirmado el monto total del pedido.</li>
+      <li>El <strong>50% restante</strong> se cancela al momento de recibir el pedido.</li>
+    </ul>
+
+    <h3>📦 Devoluciones:</h3>
+    <ul>
+      <li>No se realiza <strong>devolución del anticipo (50%)</strong> después de 24 horas de realizado el pedido.</li>
+      <li>No se aceptan devoluciones de producto una vez abierto, excepto en casos en los que el producto se encuentre <strong>dañado o defectuoso</strong> al momento de la entrega.</li>
+    </ul>
+  </div>
+
+  <div class="contenedor">
+    <h2>💗 Calculadora de Shein 💗</h2>
+    <input type="number" id="pesos" placeholder="Monto en $MXN">
+    <br>
+    <button id="convertirBtn">Calcular precio</button>
+
+    <div id="texto-resultado">El monto a pagar es:</div>
+    <div id="resultado"></div>
+  </div>
+
+  <div class="contacto">
+    📱 Contacto:<br>
+    PIPIA +502 5632-0811
+  </div>
+
+  <script>
+    const boton = document.getElementById("convertirBtn");
+    boton.addEventListener("click", function() {
+      const tasa = 1.55;
+      const input = document.getElementById("pesos");
+      const pesos = parseFloat(input.value);
+      const resultado = document.getElementById("resultado");
+      if (!isNaN(pesos)) {
+        const quetzales = Math.round(pesos * tasa);
+        resultado.innerText = `Q. ${quetzales}.°°`;
+      } else {
+        resultado.innerText = "";
+      }
+    });
+  </script>
+</body>
+</html>
