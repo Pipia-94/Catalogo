@@ -9,9 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { box-sizing: border-box; }
 
     body {
       font-family: 'Quicksand', sans-serif;
@@ -19,7 +17,7 @@
       color: #444;
       margin: 0;
       padding: 15px;
-      text-align: center; 
+      text-align: center;
       overflow-x: hidden;
     }
 
@@ -155,7 +153,7 @@
 <body>
   <h2>SHEIN PEDIDOS</h2>
 
-  <!-- ⚡ CALCULADORA MOVIDA AL INICIO ⚡ -->
+  <!-- ⚡ CALCULADORA ARRIBA ⚡ -->
   <div class="contenedor">
     <h2>💗 Calculadora de Shein 💗</h2>
     <input type="number" id="pesos" placeholder="Monto en $MXN">
@@ -166,6 +164,13 @@
     <div id="resultado"></div>
   </div>
 
+  <!-- ⚡ CONTACTO JUSTO DEBAJO DE LA CALCULADORA ⚡ -->
+  <div class="contacto">
+    📱 Contacto:<br>
+    PIPIA +502 5632-0811
+  </div>
+
+  <!-- ⚡ POLÍTICAS ABAJO (IGUALES) ⚡ -->
   <div class="politicas">
     <h3>🛍️ Compra:</h3>
     <ul>
@@ -185,15 +190,10 @@
     </ul>
   </div>
 
-  <div class="contacto">
-    📱 Contacto:<br>
-    PIPIA +502 5632-0811
-  </div>
-
   <script>
     const boton = document.getElementById("convertirBtn");
     boton.addEventListener("click", function() {
-      const tasa = 0.80;
+      const tasa = 0.90;
       const input = document.getElementById("pesos");
       const pesos = parseFloat(input.value);
       const resultado = document.getElementById("resultado");
@@ -205,5 +205,6 @@
       }
     });
   </script>
+
 </body>
 </html>
