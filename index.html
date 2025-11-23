@@ -169,4 +169,41 @@
   <div class="politicas">
     <h3>🛍️ Compra:</h3>
     <ul>
-      <li>Descarga la app de Shein y selecciona <strong>región de México</stron
+      <li>Descarga la app de Shein y selecciona <strong>región de México</strong>.</li>
+      <li>Selecciona los productos que desees y añádelos a tu carrito.</li>
+      <li><strong>UTILIZA LA CALCULADORA QUE TIENES ABAJO PARA SABER EL PRECIO FINAL DE TU PRODUCTO EN QUETZALES, EL PRECIO FINAL INCLUYE ENVIO Y CASILLERO.</strong></li>
+      <li>Comparte tu carrito a nuestro <strong>WhatsApp 56320811</strong>.</li>
+      <li>Te confirmamos el monto total.</li>
+      <li>Se deberá cancelar el <strong>50% del valor total</strong> al momento de confirmado el monto total del pedido.</li>
+      <li>El <strong>50% restante</strong> se cancela al momento de recibir el pedido.</li>
+    </ul>
+
+    <h3>📦 Devoluciones:</h3>
+    <ul>
+      <li>No se realiza <strong>devolución del anticipo (50%)</strong> después de 24 horas de realizado el pedido.</li>
+      <li>No se aceptan devoluciones de producto una vez abierto, excepto en casos en los que el producto se encuentre <strong>dañado o defectuoso</strong> al momento de la entrega.</li>
+    </ul>
+  </div>
+
+  <div class="contacto">
+    📱 Contacto:<br>
+    PIPIA +502 5632-0811
+  </div>
+
+  <script>
+    const boton = document.getElementById("convertirBtn");
+    boton.addEventListener("click", function() {
+      const tasa = 0.80;
+      const input = document.getElementById("pesos");
+      const pesos = parseFloat(input.value);
+      const resultado = document.getElementById("resultado");
+      if (!isNaN(pesos)) {
+        const quetzales = Math.round(pesos * tasa);
+        resultado.innerText = `Q. ${quetzales}.°°`;
+      } else {
+        resultado.innerText = "";
+      }
+    });
+  </script>
+</body>
+</html>
