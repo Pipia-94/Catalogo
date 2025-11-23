@@ -4,14 +4,11 @@
   <meta charset="UTF-8">
   <title>SHEIN PEDIDOS</title>
 
-  <!-- Hace que la página se vea bien en móviles -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fuente bonita -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Box-sizing universal */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -23,7 +20,7 @@
       margin: 0;
       padding: 15px;
       text-align: center; 
-      overflow-x: hidden; /* Evita scroll horizontal */
+      overflow-x: hidden;
     }
 
     h2 {
@@ -48,7 +45,7 @@
       margin-bottom: 25px;
       text-align: left;
       width: 100%;
-      max-width: 480px; /* Ajuste máximo */
+      max-width: 480px;
       margin-left: auto;
       margin-right: auto;
       line-height: 1.8;
@@ -67,7 +64,7 @@
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(193, 83, 135, 0.2);
       width: 100%;
-      max-width: 480px; /* Ajuste máximo */
+      max-width: 480px;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 30px;
@@ -82,7 +79,7 @@
     input {
       padding: 14px;
       margin: 10px 0;
-      width: 90%; /* Ocupa 90% del contenedor */
+      width: 90%;
       font-size: 16px;
       border-radius: 10px;
       border: 1px solid #c15387;
@@ -103,7 +100,7 @@
       color: white;
       cursor: pointer;
       font-weight: 500;
-      width: 90%; /* Ajuste ancho del botón */
+      width: 90%;
       max-width: 250px;
       margin-bottom: 10px;
       transition: all 0.3s ease;
@@ -116,7 +113,7 @@
 
     #texto-resultado {
       margin-top: 20px;
-      font-size: 24px; /* Un poco más grande */
+      font-size: 24px;
       font-weight: 600;
       color: #a64b79;
     }
@@ -158,25 +155,7 @@
 <body>
   <h2>SHEIN PEDIDOS</h2>
 
-  <div class="politicas">
-    <h3>🛍️ Compra:</h3>
-    <ul>
-      <li>Descarga la app de Shein y selecciona <strong>región de México</strong>.</li>
-      <li>Selecciona los productos que desees y añádelos a tu carrito.</li>
-      <li><strong>UTILIZA LA CALCULADORA QUE TIENES ABAJO PARA SABER EL PRECIO FINAL DE TU PRODUCTO EN QUETZALES, EL PRECIO FINAL INCLUYE ENVIO Y CASILLERO.</strong></li>
-      <li>Comparte tu carrito a nuestro <strong>WhatsApp 56320811</strong>.</li>
-      <li>Te confirmamos el monto total.</li>
-      <li>Se deberá cancelar el <strong>50% del valor total</strong> al momento de confirmado el monto total del pedido.</li>
-      <li>El <strong>50% restante</strong> se cancela al momento de recibir el pedido.</li>
-    </ul>
-
-    <h3>📦 Devoluciones:</h3>
-    <ul>
-      <li>No se realiza <strong>devolución del anticipo (50%)</strong> después de 24 horas de realizado el pedido.</li>
-      <li>No se aceptan devoluciones de producto una vez abierto, excepto en casos en los que el producto se encuentre <strong>dañado o defectuoso</strong> al momento de la entrega.</li>
-    </ul>
-  </div>
-
+  <!-- ⚡ CALCULADORA MOVIDA AL INICIO ⚡ -->
   <div class="contenedor">
     <h2>💗 Calculadora de Shein 💗</h2>
     <input type="number" id="pesos" placeholder="Monto en $MXN">
@@ -187,25 +166,7 @@
     <div id="resultado"></div>
   </div>
 
-  <div class="contacto">
-    📱 Contacto:<br>
-    PIPIA +502 5632-0811
-  </div>
-
-  <script>
-    const boton = document.getElementById("convertirBtn");
-    boton.addEventListener("click", function() {
-      const tasa = 0.80;
-      const input = document.getElementById("pesos");
-      const pesos = parseFloat(input.value);
-      const resultado = document.getElementById("resultado");
-      if (!isNaN(pesos)) {
-        const quetzales = Math.round(pesos * tasa);
-        resultado.innerText = `Q. ${quetzales}.°°`;
-      } else {
-        resultado.innerText = "";
-      }
-    });
-  </script>
-</body>
-</html>
+  <div class="politicas">
+    <h3>🛍️ Compra:</h3>
+    <ul>
+      <li>Descarga la app de Shein y selecciona <strong>región de México</stron
